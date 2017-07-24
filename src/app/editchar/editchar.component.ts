@@ -25,7 +25,7 @@ export class EditcharComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.charId = parseInt(urlParameters['id']);
+      this.charId = urlParameters['id'];
     });
     this.charToDisplay = this.charService.getCharById(this.charId);
   }
