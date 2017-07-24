@@ -1,3 +1,22 @@
-<p>
-  admin works!
-</p>
+<h3>Add New Character</h3>
+<div>
+  <div>
+    <label>Character Name:</label>
+    <br>
+    <input #newCharname>
+  </div>
+
+  <div>
+    <label>Character Description:</label>
+    <br>
+    <input #newDesc>
+  </div>
+
+  <div>
+    <label>Character Level of Evil:</label>
+    <br>
+    <input #newEvil></input>
+  </div>
+
+<button (click)="submitForm(newCharname.value, newDesc.value, newEvil.value)">Add</button>
+</div>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Char } from './char.model';
-import { CHARS } from './mock-chars';
+// import { CHARS } from './mock-chars';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
@@ -15,11 +15,15 @@ export class CharService {
     return this.chars;
   }
 
+  addChar(newChar: Char) {
+    this.chars.push(newChar);
+  }
+
   getCharById(charId: number){
-    for (var i = 0; i <= CHARS.length -1; i++) {
-      if (CHARS[i].id === charId) {
-        return CHARS[i];
-      }
-    }
+    // for (var i = 0; i <= CHARS.length -1; i++) {
+    //   if (CHARS[i].id === charId) {
+    //     return CHARS[i];
+    //   }
+    // }
   }
 }
