@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+import { Char } from '../char.model';
+
+
 
 @Component({
   selector: 'app-editchar',
@@ -6,10 +11,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editchar.component.css']
 })
 export class EditcharComponent implements OnInit {
+  charId: number = null;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+      this.charId = parseInt(urlParameters['id']);
+    });
   }
 
 }
