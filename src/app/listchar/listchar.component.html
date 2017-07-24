@@ -1,6 +1,6 @@
 <h2>List of Characters</h2>
 
-<div *ngFor="let char of chars" (click)="goToCharPage(char)" class="panel panel-default">
+<div *ngFor="let char of chars | async" (click)="goToCharPage(char)" class="panel panel-default">
   <div class="panel-body">
   <h3><em>{{char.charname}}</em></h3>
   </div>

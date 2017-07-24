@@ -1,0 +1,12 @@
+{ "chars": [{
+    "charname": "Agent Cooper",
+    "desc": "FBI agent assigned to investigate the murder of Laura Palmer",
+    "evil": "0",
+    "id": "1"
+    }, {
+    "charname": "Laura Palmer",
+    "desc": "Twin Peaks resident discovered dead in the first scene",
+    "evil": "0",
+    "id": "2"
+      }]
+}

@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Char } from './char.model';
 import { CHARS } from './mock-chars';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
 export class CharService {
+  chars: FirebaseListObservable<any[]>;
 
-  constructor() { }
+  constructor(private database: AngularFireDatabase){
+    this.chars = database.list('chars');
+  }
 
   getChars() {
-    return CHARS;
+    return this.chars;
   }
 
   getCharById(charId: number){

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Char } from '../char.model';
 import { Router } from '@angular/router';
 import { CharService } from '../char.service';
+import { FirebaseListObservable } from 'angularfire2/database';
+
 
 
 @Component({
@@ -12,7 +14,7 @@ import { CharService } from '../char.service';
 })
 
 export class ListcharComponent implements OnInit {
-  chars: Char[];
+  chars: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private charService: CharService){}
 
