@@ -1,3 +1,7 @@
-<p>
-  listchar works!
-</p>
+<h2>List of Characters</h2>
+
+<div *ngFor="let char of chars">
+  <div class="panel-body">
+  <h3><em>{{char.charname}}</em></h3>
+  </div>
+</div>
