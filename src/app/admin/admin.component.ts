@@ -11,7 +11,7 @@ import { Char } from '../char.model';
 })
 export class AdminComponent implements OnInit {
 
-  constructor(private CharService: CharService) { }
+  constructor(private charService: CharService) { }
 
   ngOnInit() {
   }

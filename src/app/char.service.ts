@@ -19,11 +19,7 @@ export class CharService {
     this.chars.push(newChar);
   }
 
-  getCharById(charId: number){
-    // for (var i = 0; i <= CHARS.length -1; i++) {
-    //   if (CHARS[i].id === charId) {
-    //     return CHARS[i];
-    //   }
-    // }
+  getCharById(charId: string){
+    return this.database.object('chars/' + charId);
   }
 }

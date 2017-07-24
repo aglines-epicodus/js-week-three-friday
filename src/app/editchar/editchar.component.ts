@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Char } from '../char.model';
 import { CharService } from '../char.service';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 
 
 @Component({
@@ -13,8 +14,8 @@ import { CharService } from '../char.service';
 })
 
 export class EditcharComponent implements OnInit {
-  charId: number;
-  charToDisplay: Char;
+  charId;
+  charToDisplay;
 
   constructor(
     private route: ActivatedRoute,

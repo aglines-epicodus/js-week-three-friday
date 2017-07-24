@@ -22,8 +22,8 @@ export class ListcharComponent implements OnInit {
     this.chars = this.charService.getChars();
   }
 
-  goToCharPage(clickedChar: Char) {
-    // this.router.navigate(['chars', clickedChar.id]);
+  goToCharPage(clickedChar) {
+    this.router.navigate(['chars', clickedChar.$key]);
   };
 
 
