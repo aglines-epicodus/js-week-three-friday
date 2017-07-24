@@ -21,4 +21,10 @@ export class ChangeCharComponent implements OnInit {
     this.charService.updateChar(charToUpdate);
   }
 
+  beginDeletingChar(charToDelete){
+    if (confirm("Are you sure?") )
+    {
+    this.charService.deleteChar(charToDelete);
+    }
+  }
 }

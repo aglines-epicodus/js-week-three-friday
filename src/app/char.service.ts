@@ -29,4 +29,9 @@ export class CharService {
                                 desc: localUpdatedChar.desc,
                                 evil: localUpdatedChar.evil});
   }
+
+  deleteChar(localCharToDelete){
+    var charEntryInFirebase = this.getCharById(localCharToDelete.$key);
+    charEntryInFirebase.remove();
+  }
 }
