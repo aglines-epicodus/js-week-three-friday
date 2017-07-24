@@ -22,4 +22,11 @@ export class CharService {
   getCharById(charId: string){
     return this.database.object('chars/' + charId);
   }
+
+  updateChar(localUpdatedChar) {
+    var charEntryInFirebase = this.getCharById(localUpdatedChar.$key);
+    charEntryInFirebase.update({charname: localUpdatedChar.charname,
+                                desc: localUpdatedChar.desc,
+                                evil: localUpdatedChar.evil});
+  }
 }
